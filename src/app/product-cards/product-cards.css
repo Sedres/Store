@@ -1,0 +1,133 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding-bottom: 15px;
+  background: rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+}
+.cards:hover,
+.cards:active {
+  box-shadow: 0 0 10px 0 var(--pure-blue);
+  transition: all 0.3s;
+  background: rgba(0, 248, 248, 0.089);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.cards img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.buy {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--pure-blue);
+  color: #fff;
+  cursor: pointer;
+}
+.add {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+}
+.add img {
+  width: 20px;
+  height: 20px;
+}
+.buy:active {
+  transform: scale(0.9);
+}
+.buy:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 0 var(--pure-blue);
+}
+.add:hover {
+  box-shadow: 0 0 10px 0 var(--pure-blue);
+}
+.add:active {
+  transform: scale(0.9);
+}
+/* Estilos para la vista previa de la imagen */
+.image-preview {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  padding: 3px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+}
+.closePreview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 5px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  font-size: 20px;
+  box-shadow: inset 0 0 0 2px #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #000000;
+
+  transition: all 0.3s;
+}
+.closePreview:hover {
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s;
+  transform: scale(1.1);
+}
+.hidePreview {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .image-preview {
+    width: 90%;
+    height: fit-content;
+  }
+  .image-preview img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+
+    border-radius: 0;
+    box-shadow: none;
+    object-fit: contain;
+  }
+}

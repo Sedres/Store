@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  /* Color scheme  */
+  color-scheme: light dark;
+  scrollbar-width: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Color scheme  */
+  --pure-blue: #007bff;
+}
