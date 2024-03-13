@@ -14,11 +14,11 @@
 
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
+  transition: 0.3s;
 }
 .cards:hover,
 .cards:active {
   box-shadow: 0 0 10px 0 var(--pure-blue);
-  transition: all 0.3s;
   background: rgba(0, 248, 248, 0.089);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -40,6 +40,7 @@
   background-color: var(--pure-blue);
   color: #fff;
   cursor: pointer;
+  transition: 0.3s;
 }
 .add {
   padding: 10px;
@@ -50,6 +51,7 @@
   cursor: pointer;
   width: fit-content;
   height: fit-content;
+  transition: 0.3s;
 }
 .add img {
   width: 20px;
@@ -59,8 +61,8 @@
   transform: scale(0.9);
 }
 .buy:hover {
-  background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px 0 var(--pure-blue);
+  background-color: #000000;
 }
 .add:hover {
   box-shadow: 0 0 10px 0 var(--pure-blue);
@@ -79,6 +81,7 @@
   padding: 3px;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .image-preview img {
@@ -103,12 +106,10 @@
   border-radius: 10px;
   padding: 5px;
   background-color: #000000;
-
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 .closePreview:hover {
   background-color: rgb(255, 255, 255);
-  transition: all 0.3s;
   transform: scale(1.1);
 }
 .hidePreview {
