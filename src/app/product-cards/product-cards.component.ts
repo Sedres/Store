@@ -13,7 +13,7 @@ export class ProductCardsComponent {
   products = [
     {
       name: 'Camiseta',
-      imageURL: '../../assets/pants.jpg',
+      imageURL: '../../assets/camiseta.jpg',
       description: 'Camiseta de astronauta',
       price: 100
     },
@@ -24,16 +24,22 @@ export class ProductCardsComponent {
       price: 200
     },
     {
-      name: 'Pantalón',
-      imageURL: '../../assets/pants.jpg',
+      name: 'Camiseta',
+      imageURL: '../../assets/camiseta.jpg',
       description: 'Pantalón de astronauta',
-      price: 200
+      price: 100
     },
     {
       name: 'Pantalón',
       imageURL: '../../assets/pants.jpg',
       description: 'Pantalón de astronauta',
       price: 200
+    },
+    {
+      name: 'Camiseta',
+      imageURL: '../../assets/camiseta.jpg',
+      description: 'Pantalón de astronauta',
+      price: 100
     },
     {
       name: 'Pantalón',
@@ -43,18 +49,12 @@ export class ProductCardsComponent {
     }
   ]
   selectedImageURL: string | null = null
-  showImagePreview(imageURL: string) {
+  tooglePreview(imageURL: string) {
     this.selectedImageURL = imageURL
     const imagePreview = document.querySelector('.image-preview')
     if (imagePreview) {
-      console.log(imagePreview)
-      imagePreview.classList.remove('hidePreview')
-    }
-  }
-  closeImagePreview() {
-    const imagePreview = document.querySelector('.image-preview')
-    if (imagePreview) {
-      imagePreview.classList.add('hidePreview')
+      imagePreview.classList.toggle('openPreview')
+      imagePreview.classList.toggle('hiddenPreview')
     }
   }
 }

@@ -3,7 +3,7 @@
   <img
     src="{{item.imageURL}}"
     alt="Articles"
-    (click)="showImagePreview(item.imageURL)"
+    (click)="tooglePreview(item.imageURL)"
   />
   <h3>{{item.name}}</h3>
   <p>{{item.description}}</p>
@@ -15,7 +15,10 @@
 }
 
 <!-- Vista previa de la imagen -->
-<div class="image-preview hidePreview">
-  <span class="closePreview" (click)="closeImagePreview()">❌</span>
+<div class="image-preview hiddenPreview">
+  <div class="backdrop"></div>
+  <span class="closePreview" (click)="tooglePreview('{{selectedImageURL}}')"
+    >❌</span
+  >
   <img src="{{selectedImageURL}}" alt="Preview" />
 </div>
