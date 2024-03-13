@@ -6,8 +6,6 @@ div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  margin-left: 70px; /* Espacio a la izquierda */
-  margin-right: 70px; /* Espacio a la derecha */
 }
 
 .nav {
